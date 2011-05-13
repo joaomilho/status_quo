@@ -1,0 +1,30 @@
+
+# StatusQuo
+# 
+# The f*cking simple status management solution
+#
+# Usage:
+#   status :foo, :bar, :baz
+#
+# Ok! Now you got...
+# scopes: 
+#   Klass.foo, Klass.bar & Klass.baz
+# booleans:
+#   inst.foo?, inst.bar? & inst.baz?
+# bangs:
+#   inst.foo!, inst.bar! & inst.baz!
+#
+# Too abstract? Too nilbie? Read this:
+#
+# rails g model User name:string status:string
+#
+# class User < ActiveRecord::Base
+#   status :pending, :approved
+# end
+#
+# User.pending # returns all pending users
+# User.approved # returns all pending users
+#
+# User.find(1).pending? # returns if the user is pending
+#
+# User.find(2).approved! # approves the user
