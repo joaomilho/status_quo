@@ -4,7 +4,7 @@ require 'rails/generators/migration'
 
 class StatusDistance < Rails::Railtie
 
-  initializer 'activerecord-postgres-hstore' do
+  initializer 'status_quo' do
     ActiveSupport.on_load :active_record do
       require "status_quo/status_quo"
     end

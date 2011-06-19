@@ -1,4 +1,3 @@
-
 # StatusQuo
 # 
 # The f*cking simple status management solution
@@ -24,7 +23,7 @@ module StatusQuo
             self.status == '#{status}'
           end
           def #{status}!
-            update_attribute :status, '#{status}'
+            (status = '#{status}') and save
           end
         )
       end
